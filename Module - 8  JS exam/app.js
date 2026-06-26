@@ -88,6 +88,11 @@ const closeModal = () => {
 const searchProduct = () => {
     const search_item = document.getElementById("search-input").value;
 
+    if (search_item === "") {
+        loadallProduct();
+        return;
+    }
+
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search_item}`)
         .then((res) => res.json())
         .then((data) => {
