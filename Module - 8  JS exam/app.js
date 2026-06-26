@@ -89,6 +89,7 @@ const searchProduct = () => {
     const search_item = document.getElementById("search-input").value;
 
     if (search_item === "") {
+        alert("Enter search item!");
         loadallProduct();
         return;
     }
